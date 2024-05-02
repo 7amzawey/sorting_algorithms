@@ -1,6 +1,7 @@
 #include "sort.h"
 /**
  * swap - is the swap function
+ * @list: is the lisg
  * @a: is the first list
  * @b: is the second list
  */
@@ -17,16 +18,17 @@ void swap(listint_t **list, listint_t *a, listint_t *b)
 	if (b->prev == NULL)
 		*list = b;
 }
- /**
+
+/**
  * cocktail_sort_list - sorts a doubly linked list of integer
  * it's so much like bubble sort but goes forward and bakcward
- * @list: is linked list
+ * @list: is the list
  */
 void cocktail_sort_list(listint_t **list)
 {
 	listint_t *a, *b;
 	int i = 1;
-	
+
 	if (!(*list) || !(list))
 		return;
 
