@@ -4,7 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
-
 /**
  * struct listint_s - Doubly linked list node
  *
@@ -14,9 +13,9 @@
  */
 typedef struct listint_s
 {
-    const int n;
-    struct listint_s *prev;
-    struct listint_s *next;
+	const int n;
+	struct listint_s *prev;
+	struct listint_s *next;
 } listint_t;
 
 void swap(listint_t **list, listint_t *a, listint_t *b);
