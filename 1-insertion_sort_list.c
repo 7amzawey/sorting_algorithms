@@ -29,21 +29,22 @@ void insertion_sort_list(listint_t **list)
 
 	if (!list || !(*list) || !(*list)->next)
 		return;
-	a = (*list)->next; /*a = 3*/
-	/*5, 3, 12, 12, 1*/
+	a = (*list)->next; /*a =3*/
+	/*5, 3, 0, 12, 1*/
 	while (a)
 	{
-		b = a;/*b = 1*/
-		a = a->next;/*a = NULL*/
+		b = a;/*b = 3*/
+		a = a->next;/*a = 0*/
 		while (b && b->prev)
 		{
 			if (b->prev->n > b->n)
 			{
-				swap(list, b->prev, b);/*b->prev = 1, b =12*/
-				print_list(*list);/*3, 5, 12, 1, 12*/
+				/*b->prev = 5  b = 3*/
+				swap(list, b->prev, b);/*b->prev = 3, b = 5*/
+				print_list(*list);/*3, 5, 0, 12, 1*/
 			}
 			else
-				b = b->prev;/*b->prev = 12, b =1*/
+				b = b->prev;/*b->prev = , b =*/ 
 		}
 	}
 }
